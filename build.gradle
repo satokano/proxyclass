@@ -14,17 +14,26 @@ plugins {
     id 'application'
 }
 
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+version = '0.1.0'
+
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
 repositories {
-    // Use jcenter for resolving dependencies.
-    // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
 
+// compileOnly — for dependencies that are necessary to compile your production code but shouldn’t be part of the runtime classpath
+// implementation (supersedes compile) — used for compilation and runtime
+// runtimeOnly (supersedes runtime) — only used at runtime, not for compilation
+// testCompileOnly — same as compileOnly except it’s for the tests
+// testImplementation — test equivalent of implementation
+// testRuntimeOnly — test equivalent of runtimeOnly
+// api - library pluginを入れると使えるようになる
 dependencies {
-    // This dependency is used by the application.
     implementation 'com.google.guava:guava:27.1-jre'
-
-    // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 }
 
@@ -32,3 +41,4 @@ application {
     // Define the main class for the application
     mainClassName = 'com.github.satokano.proxyclass.App'
 }
+
