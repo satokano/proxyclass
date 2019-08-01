@@ -36,11 +36,12 @@ repositories {
 // api - library pluginを入れると使えるようになる
 dependencies {
     implementation 'com.google.guava:guava:27.1-jre'
+    implementation 'mysql:mysql-connector-java:8.0.17'
     testImplementation 'junit:junit:4.12'
 }
 
 application {
     // Define the main class for the application
-    mainClassName = 'com.github.satokano.proxyclass.App'
+    mainClassName = 'com.github.satokano.proxyclass.AppRunner'
 }
 

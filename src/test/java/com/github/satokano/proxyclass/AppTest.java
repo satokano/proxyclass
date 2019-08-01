@@ -4,11 +4,14 @@
 package com.github.satokano.proxyclass;
 
 import org.junit.Test;
+
+import com.github.satokano.proxyclass.fw.AppRunner;
+
 import static org.junit.Assert.*;
 
 public class AppTest {
     @Test public void testAppHasAGreeting() {
-        App classUnderTest = new App();
+        AppRunner classUnderTest = new AppRunner();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
 }
